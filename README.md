@@ -63,3 +63,21 @@ work.
 
 ---
 Thank you in advance for your effort and time, and good luck!
+
+# Task 1: Changes
+-- made some minor changes to syntax by adding correct delimiter corrected spelling of function
+'get_products' when it was called
+-- instead of hard-coding the productID, i made it more dynamic by referring to the 'id' element in the array 
+
+# Task 2: Changes
+# Encapsulation:
+
+The $products array is encapsulated within the Product class as a private property. This ensures that the internal state of the class is not directly accessible from outside.
+
+# Dependency Injection:
+
+The $products array is passed to the class through the constructor. 
+
+# Method Refactoring:
+
+The logic for finding a product by ID is moved into the get_products method of the Product class. 

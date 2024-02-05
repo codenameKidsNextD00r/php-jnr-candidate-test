@@ -43,16 +43,16 @@ $credentialsPath = __DIR__ . '/credentials.json';
 $spreadsheetId = '1DU1OdM7uFMYAtJCyyU8dNR7H-Mkp-9ZJoCTK-wRkMwY';
 
 // Initialize the Google Sheets API service
-$client = new Google_Client();
-$client->setAuthConfig($credentialsPath);
-$client->addScope(Google_Service_Sheets::SPREADSHEETS_READONLY);
-$service = new Google_Service_Sheets($client);
+// $client = new Google_Client();
+// $client->setAuthConfig($credentialsPath);
+// $client->addScope(Google_Service_Sheets::SPREADSHEETS_READONLY);
+// $service = new Google_Service_Sheets($client);
 
-// create instance of GoogleSheetsIntegration class
-$googleSheetsIntegration = new GoogleSheetsIntegration($spreadsheetId, $service);
+// // create instance of GoogleSheetsIntegration class
+// $googleSheetsIntegration = new GoogleSheetsIntegration($spreadsheetId, $service);
 
-// get products from Google Sheets
-$products = $googleSheetsIntegration->get_products();
+// // get products from Google Sheets
+// $products = $googleSheetsIntegration->get_products();
 
-//dump products 
-var_dump($products);
+// //dump products 
+// var_dump($products);

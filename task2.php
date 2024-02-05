@@ -3,7 +3,7 @@
 Class Product
 {
     private $products;
-
+    // encapsulating array in this class
     public function __construct(array $products)
     {
         $this->products = $products;

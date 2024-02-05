@@ -3,7 +3,8 @@
 function get_products($products, $productId) {
     $productDetails = [];
     foreach ($products as $product) {
-        if($productId == $product['id'] ) { //extra parentheses
+        //add extra = to indicate comparison not assignment
+        if($productId == $product['id'] ) { //extra parentheses removed
             $productDetails = $product;
         }
     }
@@ -16,9 +17,11 @@ $products = [
     ['id' => 103, 'name' => 'Product 3', 'price' => 120.00],
 ];
 
+//assigned this var to 'id' elemenet to make the variable more dynamic
 $productId = $products['id'];
 $product = get_products($products, 104); //incorrect function called(spelling)
 
+//added conditional check to cater for ids provided that aren't present
 if (empty($product)){
     echo "That product does not exist";
 }else{
