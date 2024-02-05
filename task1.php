@@ -17,7 +17,7 @@ $products = [
 ];
 
 $productId = $products['id'];
-$product = get_products($products, 103); //incorrect function called(spelling)
+$product = get_products($products, 104); //incorrect function called(spelling)
 
 if (empty($product)){
     echo "That product does not exist";
