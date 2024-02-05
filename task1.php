@@ -3,7 +3,7 @@
 function get_products($products, $productId) {
     $productDetails = [];
     foreach ($products as $product) {
-        if($product['id'] = $productId) { //extra parentheses
+        if($productId == $product['id'] ) { //extra parentheses
             $productDetails = $product;
         }
     }
@@ -16,7 +16,12 @@ $products = [
     ['id' => 103, 'name' => 'Product 3', 'price' => 120.00],
 ];
 
-$productId = 102;
-$product = get_products($products, $productId); //incorrect function called(spelling)
-echo 'Product Name: ' . $product['name'] . "\n";
-echo 'Product Price: ' . $product['price'] . "\n";
+$productId = $products['id'];
+$product = get_products($products, 103); //incorrect function called(spelling)
+
+if (empty($product)){
+    echo "That product does not exist";
+}else{
+    echo 'Product Name: ' . $product['name'] . "\n";
+    echo 'Product Price: ' . $product['price'] . "\n";    
+}
